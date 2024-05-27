@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Dahua Vietnam</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css"
+		/>
+
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/scrollreveal"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="navbar-top">
+				<div class="social-link">
+					<i
+						><img
+							src="./assets/twitter.png"
+							alt=""
+							width="30px"
+					/></i>
+					<i
+						><img
+							src="./assets/facebook.png"
+							alt=""
+							width="30px"
+					/></i>
+					<i
+						><img
+							src="./assets/google-plus.png"
+							alt=""
+							width="30px"
+					/></i>
+				</div>
+				<div class="logo">
+					<img src="assets/logo.png" alt="" />
+				</div>
+				<div class="icons">
+					<i
+						><img
+							src="./assets/search.png"
+							alt=""
+							width="20px"
+					/></i>
+					<i
+						><img
+							src="./assets/heart.png"
+							alt=""
+							width="20px"
+					/></i>
+					<i
+						><img
+							src="./assets/shopping-cart.png"
+							alt=""
+							width="25px"
+					/></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-content">
+			<nav class="navbar navbar-expand-md" id="navbar-color">
+				<div class="container">
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#collapsibleNavbar"
+					>
+						<span
+							><i
+								><img
+									src="./image/menu.png"
+									alt=""
+									width="30px" /></i
+						></span>
+					</button>
+
+					<div
+						class="collapse navbar-collapse"
+						id="collapsibleNavbar"
+					>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="index.html"
+									>Trang chủ</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="#solution"
+									>Giải pháp</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="#camera"
+									>Camera</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#dvr"
+									>Đầu ghi</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="#contact"
+									>Liên hệ</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<div class="container container-solution" id="solution">
+			<h3 class="text-center" style="margin-top: 50px">
+				GIẢI PHÁP ĐẦU CUỐI
+			</h3>
+			<div class="row" style="margin-top: 50px">
+				<div class="col-md-4 py-3 py-md-0">
+					<div class="card" id="tpc">
+						<img
+							src="./assets/giai-phap-chinh-phu.jpg"
+							alt=""
+							class="card image-top"
+						/>
+					</div>
+					<p>Giải pháp chính phủ</p>
+				</div>
+				<div class="col-md-4 py-3 py-md-0">
+					<div class="card" id="tpc">
+						<img
+							src="./assets/giai-phap-ngan-hang.jpg"
+							alt=""
+							class="card image-top"
+						/>
+					</div>
+					<p>Giải pháp ngân hàng & tài chính</p>
+				</div>
+				<div class="col-md-4 py-3 py-md-0">
+					<div class="card" id="tpc">
+						<img
+							src="./assets/giai-phap-ban-le.jpg"
+							alt=""
+							class="card image-top"
+						/>
+					</div>
+					<p>Giải pháp bán lẻ</p>
+				</div>
+			</div>
+
+			<div class="row" style="margin-top: 50px">
+				<div class="col-md-4 py-3 py-md-0">
+					<div class="card" id="tpc">
+						<img
+							src="./assets/giai-phap-san-bay.jpg"
+							alt=""
+							class="card image-top"
+						/>
+					</div>
+					<p>Giải pháp sân bay & nhà ga</p>
+				</div>
+				<div class="col-md-4 py-3 py-md-0">
+					<div class="card" id="tpc">
+						<img
+							src="./assets/giai-phap-co-so-ha-tang.jpg"
+							alt=""
+							class="card image-top"
+						/>
+					</div>
+					<p>Giải pháp cơ sở hạ tầng & giao thông</p>
+				</div>
+				<div class="col-md-4 py-3 py-md-0">
+					<div class="card" id="tpc">
+						<img
+							src="./assets/giai-phap-nha-xuong.jpg"
+							alt=""
+							class="card image-top"
+						/>
+					</div>
+					<p>Giải pháp nhà xưởng & kho bãi</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="camera">
+			<h3 class="text-center" style="margin-top: 50px">CAMERA</h3>
+			<div class="row row-camera">
+				<div class="camera-card row row-gap"></div>
+				<script>
+					const gridCamera =
+						document.querySelector(".camera-card");
+					const urlCamera =
+						"https://docs.google.com/spreadsheets/d/1Y4pcvtrdmzGanyEYbv-qMVY6Hc4OIs8x6GIuT7K476I/export?format=csv";
+
+					fetch(urlCamera)
+						.then((result) => result.text())
+						.then(function (csvtext) {
+							return csv().fromString(csvtext);
+						})
+						.then(function (csv) {
+							csv.forEach(function (row) {
+								const productHTML =
+									"<div class='product-card col-md-3 py-3 py-md-0'>" +
+									"<div class='card' id='c'>" +
+									"<img src='" +
+									row.HinhAnh +
+									"' class='card image-top'>" +
+									"<div class='card-body'>" +
+									"<h3 class='card-title text-center'>" +
+									row.TenSanPham +
+									"</h3>" +
+									"<p class='card-text text-center'>" +
+									row.Gia +
+									"</p>" +
+									"<div id='btn3'>" +
+									"<button class='font-weight-bold'> Mua Ngay </button>";
+								"</div>" + "</div>";
+								gridCamera.innerHTML +=
+									productHTML;
+							});
+						});
+				</script>
+			</div>
+		</div>
+
+		<div class="container" id="dvr">
+			<h3 class="text-center" style="margin-top: 50px">ĐẦU GHI</h3>
+			<div class="row row-dvr">
+				<div class="dvr-card row row-gap"></div>
+				<script>
+					const gridDVR =
+						document.querySelector(".dvr-card");
+					const urlDVR =
+						"https://docs.google.com/spreadsheets/d/1518MxmrKBQayGk5XB93vApWgx99RIg20lJmHKWcOrcQ/export?format=csv";
+
+					fetch(urlDVR)
+						.then((result) => result.text())
+						.then(function (csvtext) {
+							return csv().fromString(csvtext);
+						})
+						.then(function (csv) {
+							csv.forEach(function (row) {
+								const productHTML =
+									"<div class='product-card col-md-3 py-3 py-md-0'>" +
+									"<div class='card' id='c'>" +
+									"<img src='" +
+									row.HinhAnh +
+									"' class='card image-top'>" +
+									"<div class='card-body'>" +
+									"<h3 class='card-title text-center'>" +
+									row.TenSanPham +
+									"</h3>" +
+									"<p class='card-text text-center'>" +
+									row.Gia +
+									"</p>" +
+									"<div id='btn3'>" +
+									"<button class='font-weight-bold'> Mua Ngay </button>";
+								"</div>" + "</div>";
+								gridDVR.innerHTML +=
+									productHTML;
+							});
+						});
+				</script>
+			</div>
+		</div>
+
+		<div class="container" id="contact">
+			<footer
+				class="text-center text-white text-lg-start border border-white mt-xl-5 pt-4"
+			>
+				<div class="container p-4">
+					<div class="row">
+						<div
+							class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-left"
+						>
+							<h5 class="text-uppercase mb-4">
+								CÔNG TY DSS Việt Nam
+							</h5>
+
+							<ul class="list-unstyled mb-4">
+								<li>
+									<span
+										href="#!"
+										class="text-white"
+										>Địa chỉ: Khu ĐTM
+										Cầu Giấy, Phường Yên
+										Hòa, Cầu Giấy, TP.
+										Hà Nội</span
+									>
+								</li>
+								<li>
+									<span
+										href="#!"
+										class="text-white"
+										>SĐT:
+										02473.066.335</span
+									>
+								</li>
+								<li>
+									<span
+										href="#!"
+										class="text-white"
+										>Email:
+										cskh@dahua.vn</span
+									>
+								</li>
+								<li>
+									<span
+										href="#!"
+										class="text-white"
+										>MST:
+										0106256019</span
+									>
+								</li>
+							</ul>
+						</div>
+
+						<div
+							class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-left"
+						>
+							<h5 class="text-uppercase mb-4">
+								THÔNG TIN CÔNG TY
+							</h5>
+
+							<ul class="list-unstyled">
+								<li>
+									<span
+										href="#!"
+										class="text-white"
+										>> Giới thiệu</span
+									>
+								</li>
+								<li>
+									<span
+										href="#!"
+										class="text-white"
+										>> Sản phẩm</span
+									>
+								</li>
+								<li>
+									<span
+										href="#!"
+										class="text-white"
+										>> Liên hệ</span
+									>
+								</li>
+							</ul>
+						</div>
+
+						<div
+							class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-left"
+						>
+							<h5 class="text-uppercase mb-4">
+								THÔNG TIN CHUNG
+							</h5>
+
+							<ul class="list-unstyled">
+								<li>
+									<span
+										href="#!"
+										class="text-white"
+										>> Hỗ trợ</span
+									>
+								</li>
+								<li>
+									<span
+										href="#!"
+										class="text-white"
+										>> Giải pháp</span
+									>
+								</li>
+								<li>
+									<span
+										href="#!"
+										class="text-white"
+										>> Tin tức</span
+									>
+								</li>
+							</ul>
+						</div>
+
+						<div
+							class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-left"
+						>
+							<h5 class="text-uppercase mb-4">
+								Nhận thông tin từ Dahua Việt Nam
+							</h5>
+
+							<div
+								class="form-outline form-white mb-4"
+							>
+								<form
+									action="https://script.google.com/macros/s/AKfycbzJ7XiMhQe2YqKkDcY6cq4ZD8xqkcFTh9Ruqaa_nr3uS5s03HtR7RQcyJbwPAzXuZORGg/exec"
+									id="google-sheet"
+									name="google-sheet"
+									method="post"
+								>
+									<label
+										class="form-label"
+										for="form5Example2"
+										>Xin vui lòng để lại
+										địa chỉ email để cập
+										nhật những tin tức
+										mới nhất của
+										Dahua.</label
+									>
+									<input
+										name="Email"
+										type="email"
+										id="form5Example2"
+										class="form-control"
+										placeholder="Nhập email của bạn"
+									/>
+									<button
+										type="submit"
+										onclick="submitFunction()"
+										class="btn btn-outline-white btn-block btn-submit"
+									>
+										Gửi
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center p-3 border-top border-white">
+					© 2020 Bản quyền thuộc công ty Cổ phần Công nghệ
+					DSS Việt Nam
+				</div>
+			</footer>
+		</div>
+
+		
+
+		<script src="main.js"></script>
+		<script>
+			const scriptURL =
+				"https://script.google.com/macros/s/AKfycbzJ7XiMhQe2YqKkDcY6cq4ZD8xqkcFTh9Ruqaa_nr3uS5s03HtR7RQcyJbwPAzXuZORGg/exec";
+			const form = document.forms["google-sheet"];
+
+			form.addEventListener("submit", (e) => {
+				e.preventDefault();
+				fetch(scriptURL, {
+					method: "POST",
+					body: new FormData(form),
+				})
+					.then((response) =>
+						Swal.fire({
+							position: "center",
+							icon: "success",
+							title: "Cảm ơn bạn đã đăng ký nhận thông báo từ Dahua.vn!",
+							showConfirmButton: false,
+							timer: 1500,
+						}).then(function () {
+							location.reload();
+						})
+					)
+					.catch((error) =>
+						console.error("Error!", error.message)
+					);
+			});
+		</script>
+	</body>
+</html>
