@@ -43,6 +43,10 @@
 			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 			crossorigin="anonymous"
 		></script>
+		<script
+			src="https://kit.fontawesome.com/64d58efce2.js"
+			crossorigin="anonymous"
+		></script>
 		<script src="https://unpkg.com/scrollreveal"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
@@ -109,7 +113,7 @@
 						<span
 							><i
 								><img
-									src="./image/menu.png"
+									src="./assets/menu.png"
 									alt=""
 									width="30px" /></i
 						></span>
@@ -247,26 +251,44 @@
 						})
 						.then(function (csv) {
 							csv.forEach(function (row) {
-								const productHTML =
-									"<div class='product-card col-md-3 py-3 py-md-0'>" +
-									"<div class='card' id='c'>" +
-									"<img src='" +
-									row.HinhAnh +
-									"' class='card image-top'>" +
-									"<div class='card-body'>" +
-									"<h3 class='card-title text-center'>" +
-									row.TenSanPham +
-									"</h3>" +
-									"<p class='card-text text-center'>" +
-									row.Gia +
-									"</p>" +
-									"<div id='btn3'>" +
-									"<button class='font-weight-bold'> Mua Ngay </button>";
-								"</div>" + "</div>";
+								const productHTML = `
+									<div class='product-card col-md-3 py-3 py-md-0'>
+										<div class='card' id='c'>
+											<img src='${row.HinhAnh}' class='card image-top'>
+											<div class='card-body'>
+												<h3 class='card-title text-center'>${row.TenSanPham}</h3>
+												<p class='card-text text-center'>${row.Gia}</p>
+												<div id='btn3'>
+													<button id='btn-detail-id' class='btn-detail font-weight-bold' onclick="showProductDetails('${row.TenSanPham}', '${row.Gia}', '${row.MoTa}', '${row.HinhAnh}')">Chi Tiết</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								`;
 								gridCamera.innerHTML +=
 									productHTML;
 							});
 						});
+					function showProductDetails(
+						TenSanPham,
+						Gia,
+						MoTa,
+						HinhAnh
+					) {
+						Swal.fire({
+							title: TenSanPham,
+							html: `
+								<img src="${HinhAnh}" alt="${TenSanPham}" style="max-width: 100%; height: auto;">
+								<p>${MoTa}</p>
+								<p style='color: #000'; font-weight: bold>${Gia}</p>
+								`,
+							showCloseButton: true,
+							showConfirmButton: false,
+							customClass: {
+								container: "my-swal",
+							},
+						});
+					}
 				</script>
 			</div>
 		</div>
@@ -275,7 +297,7 @@
 			<h3 class="text-center" style="margin-top: 50px">ĐẦU GHI</h3>
 			<div class="row row-dvr">
 				<div class="dvr-card row row-gap"></div>
-				<script>
+				<script async defer="defer">
 					const gridDVR =
 						document.querySelector(".dvr-card");
 					const urlDVR =
@@ -288,27 +310,154 @@
 						})
 						.then(function (csv) {
 							csv.forEach(function (row) {
-								const productHTML =
-									"<div class='product-card col-md-3 py-3 py-md-0'>" +
-									"<div class='card' id='c'>" +
-									"<img src='" +
-									row.HinhAnh +
-									"' class='card image-top'>" +
-									"<div class='card-body'>" +
-									"<h3 class='card-title text-center'>" +
-									row.TenSanPham +
-									"</h3>" +
-									"<p class='card-text text-center'>" +
-									row.Gia +
-									"</p>" +
-									"<div id='btn3'>" +
-									"<button class='font-weight-bold'> Mua Ngay </button>";
-								"</div>" + "</div>";
+								const productHTML = `
+									<div class='product-card col-md-3 py-3 py-md-0'>
+										<div class='card' id='c'>
+											<img src='${row.HinhAnh}' class='card image-top'>
+											<div class='card-body'>
+												<h3 class='card-title text-center'>${row.TenSanPham}</h3>
+												<p class='card-text text-center'>${row.Gia}</p>
+												<div id='btn3'>
+													<button id='btn-detail-id' class='btn-detail font-weight-bold' onclick="showProductDetails('${row.TenSanPham}', '${row.Gia}', '${row.MoTa}', '${row.HinhAnh}')">Chi Tiết</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								`;
 								gridDVR.innerHTML +=
 									productHTML;
 							});
 						});
+					function showProductDetails(
+						TenSanPham,
+						Gia,
+						MoTa,
+						HinhAnh
+					) {
+						Swal.fire({
+							title: TenSanPham,
+							html: `
+								<img src="${HinhAnh}" alt="${TenSanPham}" style="max-width: 100%; height: auto;">
+								<p>${MoTa}</p>
+								<p style='color: #000; font-weight: bold'>${Gia}</p>
+								`,
+							showCloseButton: true,
+							showConfirmButton: false,
+							customClass: {
+								container: "my-swal",
+							},
+						});
+					}
 				</script>
+			</div>
+		</div>
+		<div class="container container-register" style="padding: 0">
+			<div class="register-top">
+				<h3 class="text-center" style="margin-top: 50px">
+					ĐĂNG KÝ NHẬN THÔNG BÁO TỪ DAHUA.VN
+				</h3>
+			</div>
+			<div class="container register-bottom" style="padding: 0">
+				<div class="form">
+					<div class="contact-info">
+						<h3 class="title">
+							(*) Nhận ngay voucher 20%
+						</h3>
+						<p class="text">
+							* Voucher sẽ được gửi sau 24h đăng ký,
+							chỉ áp dụng cho khách hàng mới
+						</p>
+
+						<div class="info">
+							<div class="information">
+								<img
+									src="assets/location.png"
+									class="icon"
+									alt=""
+								/>
+								<p>
+									Khu ĐTM Cầu Giấy, Phường
+									Yên Hòa, Cầu Giấy, TP. Hà
+									Nội
+								</p>
+							</div>
+							<div class="information">
+								<img
+									src="assets/email.png"
+									class="icon"
+									alt=""
+								/>
+								<p>cskh@dahua.vn</p>
+							</div>
+							<div class="information">
+								<img
+									src="assets/phone.png"
+									class="icon"
+									alt=""
+								/>
+								<p>02473.066.335</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="contact-form">
+						<span class="circle one"></span>
+						<span class="circle two"></span>
+
+						<form
+							name="google-sheet"
+							class="form-register"
+							action="index.html"
+							autocomplete="off"
+						>
+							<h3 class="title">
+								Đăng ký khách hàng
+							</h3>
+							<div class="input-container">
+								<input
+									type="text"
+									name="name"
+									class="input"
+								/>
+								<label for="">Họ và tên</label>
+								<span>Họ và tên</span>
+							</div>
+							<div class="input-container">
+								<input
+									type="email"
+									name="email"
+									class="input"
+								/>
+								<label for="">Email</label>
+								<span>Email</span>
+							</div>
+							<div class="input-container">
+								<input
+									type="tel"
+									name="phone"
+									class="input"
+								/>
+								<label for=""
+									>Số điện thoại</label
+								>
+								<span>Số điện thoại</span>
+							</div>
+							<div class="input-container textarea">
+								<textarea
+									name="message"
+									class="input"
+								></textarea>
+								<label for="">Nội dung</label>
+								<span>Nội dung</span>
+							</div>
+							<input
+								type="submit"
+								value="Gửi"
+								class="btn-register"
+							/>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -317,7 +466,10 @@
 				class="text-center text-white text-lg-start border border-white mt-xl-5 pt-4"
 			>
 				<div class="container p-4">
-					<div class="row">
+					<div
+						class="row"
+						style="justify-content: space-between"
+					>
 						<div
 							class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-left"
 						>
@@ -426,49 +578,6 @@
 								</li>
 							</ul>
 						</div>
-
-						<div
-							class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-left"
-						>
-							<h5 class="text-uppercase mb-4">
-								Nhận thông tin từ Dahua Việt Nam
-							</h5>
-
-							<div
-								class="form-outline form-white mb-4"
-							>
-								<form
-									action="https://script.google.com/macros/s/AKfycbzJ7XiMhQe2YqKkDcY6cq4ZD8xqkcFTh9Ruqaa_nr3uS5s03HtR7RQcyJbwPAzXuZORGg/exec"
-									id="google-sheet"
-									name="google-sheet"
-									method="post"
-								>
-									<label
-										class="form-label"
-										for="form5Example2"
-										>Xin vui lòng để lại
-										địa chỉ email để cập
-										nhật những tin tức
-										mới nhất của
-										Dahua.</label
-									>
-									<input
-										name="Email"
-										type="email"
-										id="form5Example2"
-										class="form-control"
-										placeholder="Nhập email của bạn"
-									/>
-									<button
-										type="submit"
-										onclick="submitFunction()"
-										class="btn btn-outline-white btn-block btn-submit"
-									>
-										Gửi
-									</button>
-								</form>
-							</div>
-						</div>
 					</div>
 				</div>
 
@@ -478,8 +587,6 @@
 				</div>
 			</footer>
 		</div>
-
-		
 
 		<script src="main.js"></script>
 		<script>
