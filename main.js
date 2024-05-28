@@ -26,17 +26,26 @@ ScrollReveal().reveal("#camera", {
 
 ScrollReveal().reveal(".row-camera", {
 	...scrollRevealOption,
-	delay: 1500,
+	delay: 1000,
 });
 
 ScrollReveal().reveal("#dvr", {
 	...scrollRevealOption,
-	interval: 1000,
+	interval: 500,
 });
 
 ScrollReveal().reveal(".row-dvr", {
 	...scrollRevealOption,
-	delay: 2000,
+	delay: 1000,
+});
+
+ScrollReveal().reveal(".register-top", {
+	...scrollRevealOption,
+	interval: 500,
+});
+ScrollReveal().reveal(".register-bottom", {
+	...scrollRevealOption,
+	delay: 1000,
 });
 
 const inputs = document.querySelectorAll(".input");
